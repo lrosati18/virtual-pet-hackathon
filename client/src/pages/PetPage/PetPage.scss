@@ -1,0 +1,178 @@
+
+.petpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    &__imagecontainer {
+        top:10%;
+        width: 30vw; 
+        height: auto; 
+        //border: 1px solid #ccc;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+    &__image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-top:3rem;
+    }
+    &__link{
+      position: fixed;
+      left:0;
+      top:0;
+      margin: 1rem;
+    }
+    &__name{
+      text-align: center;
+    }
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;  
+    } 
+    &__input--container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__nameinput {
+        width: 80%; 
+        // padding: 10px;
+        // margin-bottom: 20px;
+        font-size: 0.5rem;
+        //border: 0.5px solid #ccc;
+        border-radius: 5px;
+        }
+        &__message {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f44336;
+            color:white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 10; 
+            margin-top:1rem;
+          }  
+            &__dogfood {
+              border-radius: 10%;
+              width: 10vw;
+              height: 10vh;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              animation: dogfoodAnimation 3s forwards;
+              opacity: 1;
+            } 
+          @keyframes dogfoodAnimation {
+            0% {
+              bottom: 0; /* Start position */
+              opacity: 1;
+            }
+            50% {
+              bottom: 50%; 
+            }
+            100% {
+              bottom: 50%; /* End position */
+              opacity: 1;
+            }
+          }
+
+          &__dogtoy {
+            border-radius: 60%;
+            width: 10vw;
+            height: 10vh;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: dogtoyanimation 4s forwards;
+            opacity: 1;
+          }
+          
+          @keyframes dogtoyanimation {
+            0% {
+              bottom: 0;
+              opacity: 1;
+            }
+            40% {
+              bottom: 90%; 
+            }
+            50% {
+              bottom: 50%; 
+              transform: translateX(20px) translateY(20px); 
+            }
+            60% {
+              bottom: 50%;
+              transform: translateX(20px) translateY(0); 
+            }
+            70% {
+              bottom: 50%;
+              transform: translateX(40px) translateY(40px); 
+            }
+            80% {
+              bottom: 50%;
+              transform: translateX(40px) translateY(0); 
+            }
+            90% {
+              bottom: 50%;
+              transform: translateX(60px) translateY(10px);
+            }
+            100% {
+              bottom: 50%;
+              opacity: 1;
+            }
+          }
+          
+
+          &__container--small{
+            display:flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+        &__button {
+            padding: 5px 20px;
+            font-size: 0.5rem;
+            color: white;
+            background-color:rgb(128, 222, 222);
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            &--container{
+                //margin:0.5rem;
+                display:flex;
+                gap:0.2rem;
+            }
+            &--feed {
+                background-color: #5b985b;
+            }
+
+            &--cloth {
+                background-color: #88bce7;
+            }
+
+            &--play {
+                background-color: #f44336;
+            }
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+}
+
+  
